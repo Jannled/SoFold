@@ -18,14 +18,17 @@
 int rows, columns;
 float** values;
 
-Matrix::Matrix(int dimension)
+/*Matrix::Matrix(int dimension)
 {
-	
-}
+	rows = columns = dimension;
+	values[rows][columns];
+}*/
 
 Matrix::Matrix(int rows, int columns)
 {
-	
+	this->rows = rows;
+	this->columns = columns;
+	values[rows][columns];
 }
 
 Matrix::Matrix(const Matrix& orig)
@@ -33,9 +36,14 @@ Matrix::Matrix(const Matrix& orig)
 	
 }
 
-Matrix::multiply(Matrix a, Matrix b)
+Matrix::Matrix(float **values)
 {
-	if(a.columns != b.rows) throw std::range_error;
+	this->values = values;
+}
+
+Matrix Matrix::multiply(Matrix a, Matrix b)
+{
+	if(a.columns != b.rows) throw std::range_error("");
 
 	float mult[a.rows][b.columns];
 	
@@ -53,14 +61,16 @@ Matrix::multiply(Matrix a, Matrix b)
 	return Matrix(mult);
 }
 
-Matrix::multiply(float scalar, Matrix matrix)
+Matrix Matrix::multiply(float scalar, Matrix matrix)
 {
 	float result[matrix.rows][matrix.columns];
 	for(int i=0; i<matrix.rows; i++)
 		for(int j=0; j<matrix.columns; j++)
-			values[i][j] = matrix[i][j] * scalar;
+			result[i][j] = matrix.values[i][j] * scalar;
 	
-	return result;
+	Matrix m(result);
+	
+	return m;
 }
 
 Matrix::~Matrix()

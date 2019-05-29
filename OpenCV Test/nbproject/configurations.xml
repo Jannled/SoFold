@@ -12,7 +12,6 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -25,6 +24,7 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>main.cpp</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -47,7 +47,7 @@
           <linkerDepDynSerchKind>2</linkerDepDynSerchKind>
           <linkerCopySharedLibs>true</linkerCopySharedLibs>
           <linkerLibItems>
-            <linkerLibFileItem>libopencv_world.so</linkerLibFileItem>
+            <linkerLibFileItem>libopencv_world.so.4.1</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>
@@ -69,6 +69,30 @@
           <packFileListElem type="File"
                             to="${PACKAGE_TOP_DIR}bin/libopencv_world.so"
                             from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libopencv_world.so"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libopencv_world.so.4.1"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libopencv_world.so.4.1"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="755"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}bin/libopencv_world.so.4.1"
+                            from="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libopencv_world.so.4.1"
                             perm="755"
                             owner="root"
                             group="bin"/>

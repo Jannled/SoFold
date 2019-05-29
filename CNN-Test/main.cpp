@@ -14,6 +14,8 @@
 #include <cstdlib>
 #include <iostream>
 
+#include "Math/Matrix.h"
+
 using namespace std;
 
 /*
@@ -26,7 +28,10 @@ int main(int argc, char** argv)
 		{0, 1, 0}, 
 		{0, 0, 1}};
 	
-	matA * matA;
+	Matrix m1(matA);
+	Matrix m2(matA);
+	
+	Matrix res = m1.multiply(m1, m2);
 	
 	return 0;
 }

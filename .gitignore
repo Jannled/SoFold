@@ -30,3 +30,5 @@
 *.exe
 *.out
 *.app
+/OpenCV Test/build/
+/CNN-Test/build/

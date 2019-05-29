@@ -52,14 +52,14 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-Wl,-rpath,'.' libopencv_world.so
+LDLIBSOPTIONS=-Wl,-rpath,'.' libopencv_world.so.4.1
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
 	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/opencv_test
-	${CP} libopencv_world.so ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
+	${CP} libopencv_world.so.4.1 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/opencv_test: libopencv_world.so
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/opencv_test: libopencv_world.so.4.1
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/opencv_test: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
@@ -76,7 +76,7 @@ ${OBJECTDIR}/main.o: main.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} -r ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libopencv_world.so
+	${RM} -r ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libopencv_world.so.4.1
 	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/opencv_test
 
 # Subprojects

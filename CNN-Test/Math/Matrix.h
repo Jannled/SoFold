@@ -16,11 +16,11 @@
 
 class Matrix {
 public:
-	Matrix(int);
+	//Matrix(int);
 	Matrix(int, int);
 	Matrix(float**);
-	multiply(float, Matrix);
-	multiply(Matrix, Matrix);
+	Matrix multiply(float, Matrix);
+	Matrix multiply(Matrix, Matrix);
 	Matrix(const Matrix& orig);
 	virtual ~Matrix();
 	

@@ -14,19 +14,18 @@
 #ifndef MATRIX_H
 #define MATRIX_H
 
+template<class T, int ROWS, int COLS>
 class Matrix {
 public:
-	//Matrix(int);
-	Matrix(int, int);
-	Matrix(float**);
+	Matrix();
+	Matrix(T[ROWS][COLS]);
 	Matrix multiply(float, Matrix);
 	Matrix multiply(Matrix, Matrix);
 	Matrix(const Matrix& orig);
 	virtual ~Matrix();
 	
 private:
-	int rows, columns;
-	float** values;
+	T** values;
 };
 
 #endif /* MATRIX_H */

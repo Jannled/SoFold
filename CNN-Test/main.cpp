@@ -11,7 +11,6 @@
  * Created on 29. Mai 2019, 07:52
  */
 
-#include <cstdlib>
 #include <iostream>
 
 #include "Math/Matrix.h"
@@ -23,15 +22,15 @@ using namespace std;
  */
 int main(int argc, char** argv)
 {
-	double matA = {
+	float matA[3][3] = {
 		{1, 0, 0}, 
 		{0, 1, 0}, 
 		{0, 0, 1}};
 	
-	Matrix m1(matA);
-	Matrix m2(matA);
+	Matrix<float, 3, 3> m1(matA);
+	Matrix<float, 3, 3> m2(matA);
 	
-	Matrix res = m1.multiply(m1, m2);
+	//Matrix<float, 3, 3> res = m1.multiply(m1, m2);
 	
 	return 0;
 }

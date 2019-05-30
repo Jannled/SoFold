@@ -15,33 +15,22 @@
 
 #include "Matrix.h"
 
-int rows, columns;
-float** values;
+template<class T, int ROWS, int COLS>
+T values[ROWS][COLS];
 
-/*Matrix::Matrix(int dimension)
-{
-	rows = columns = dimension;
-	values[rows][columns];
-}*/
-
-Matrix::Matrix(int rows, int columns)
-{
-	this->rows = rows;
-	this->columns = columns;
-	values[rows][columns];
-}
-
-Matrix::Matrix(const Matrix& orig)
+template<class T, int ROWS, int COLS>
+Matrix<T, ROWS, COLS>::Matrix()
 {
 	
 }
 
-Matrix::Matrix(float **values)
+template<class T, int ROWS, int COLS>
+Matrix<T, ROWS, COLS>::Matrix(T values[ROWS][COLS])
 {
 	this->values = values;
 }
 
-Matrix Matrix::multiply(Matrix a, Matrix b)
+/*Matrix Matrix::multiply(Matrix a, Matrix b)
 {
 	if(a.columns != b.rows) throw std::range_error("");
 
@@ -58,7 +47,7 @@ Matrix Matrix::multiply(Matrix a, Matrix b)
 		}
 	}
 	
-	return Matrix(mult);
+	return Matrix;
 }
 
 Matrix Matrix::multiply(float scalar, Matrix matrix)
@@ -68,12 +57,19 @@ Matrix Matrix::multiply(float scalar, Matrix matrix)
 		for(int j=0; j<matrix.columns; j++)
 			result[i][j] = matrix.values[i][j] * scalar;
 	
-	Matrix m(result);
+	////Matrix m(result);
 	
-	return m;
+	return NULL;
+}*/
+
+template<class T, int ROWS, int COLS>
+Matrix<T, ROWS, COLS>::Matrix(const Matrix& orig)
+{
+	
 }
 
-Matrix::~Matrix()
+template<class T, int ROWS, int COLS>
+Matrix<T, ROWS, COLS>::~Matrix()
 {
 }
 

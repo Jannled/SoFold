@@ -7,13 +7,13 @@ CND_BASEDIR=`pwd`
 CND_BUILDDIR=build
 CND_DISTDIR=dist
 # Debug configuration
-CND_PLATFORM_Debug=GNU-Linux
-CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux
+CND_PLATFORM_Debug=MinGW_MSYS-Windows
+CND_ARTIFACT_DIR_Debug=dist/Debug/MinGW_MSYS-Windows
 CND_ARTIFACT_NAME_Debug=cnn-test
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/cnn-test
-CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux/package
+CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW_MSYS-Windows/cnn-test
+CND_PACKAGE_DIR_Debug=dist/Debug/MinGW_MSYS-Windows/package
 CND_PACKAGE_NAME_Debug=cnn-test.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/cnn-test.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/MinGW_MSYS-Windows/package/cnn-test.tar
 # Release configuration
 CND_PLATFORM_Release=MinGW_MSYS-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/MinGW_MSYS-Windows
